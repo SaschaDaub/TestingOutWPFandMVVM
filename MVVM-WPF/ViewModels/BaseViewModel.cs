@@ -10,7 +10,6 @@ namespace MVVM.ViewModels
     public class BaseViewModel : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;
-
         public void OnPropertyChanged(string propertyName)
         {
             if (PropertyChanged != null)

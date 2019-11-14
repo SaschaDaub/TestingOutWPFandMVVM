@@ -9,7 +9,5 @@ namespace MVVM.ViewModels
     public interface IViewModel
     {
         Guid Guid { get; set; }
-
-   
     }
 }

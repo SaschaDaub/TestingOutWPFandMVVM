@@ -17,14 +17,12 @@ namespace MVVM.ViewModels
             get { return _spieltagUi; }
             set { _spieltagUi = value; OnPropertyChanged("SpieltagUi"); }
         }
-
         private object _begegnungUi { get; set; }
         public object BegegnungUi
         {
             get { return _begegnungUi; }
             set { _begegnungUi = value; OnPropertyChanged("BegegnungUi"); }
         }
-
         public MainViewModel()
         {
             InitializeSpieltagUi();
@@ -42,17 +40,12 @@ namespace MVVM.ViewModels
         {
             _begegnungVm = new BegegnungViewModel();
             BegegnungUi = new BegegnungView(_begegnungVm);
-
         }
 
         private void SetUpSubscribers()
         {
-            //if (_spieltagVm.GetType().Equals(typeof(SpieltagViewModel)))
-            //{
             SpieltagViewModel spieltagVm = _spieltagVm as SpieltagViewModel;
             BegegnungViewModel begegnungVm = _begegnungVm as BegegnungViewModel;
-
-
             spieltagVm.SelectionChanged += begegnungVm.SpieltagViewModel_SelectionChanged;
         }
 

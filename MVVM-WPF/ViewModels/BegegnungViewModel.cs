@@ -10,9 +10,7 @@ namespace MVVM.ViewModels
     public class BegegnungViewModel : BaseViewModel, IViewModel
     {
         public Guid Guid { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-
         private SpieltagModel _begegnungDetail { get; set; }
-
         public SpieltagModel BegegnungDetail
         {
             get { return _begegnungDetail; }
@@ -23,7 +21,6 @@ namespace MVVM.ViewModels
         {
             BegegnungDetail = new SpieltagModel();
         }
-
         public void SpieltagViewModel_SelectionChanged(object sender, OnSelectedBegegnungChanged e)
         {
             BegegnungDetail = e.ChangedSpieltag;

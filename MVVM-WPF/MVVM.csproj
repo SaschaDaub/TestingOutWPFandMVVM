@@ -56,7 +56,6 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="BundesligaDeserializing.cs" />
-    <Compile Include="MockData.cs" />
     <Compile Include="Models\SpieltagModel.cs" />
     <Compile Include="Models\VereinModel.cs" />
     <Compile Include="OnSelectedBegegnungChanged.cs" />

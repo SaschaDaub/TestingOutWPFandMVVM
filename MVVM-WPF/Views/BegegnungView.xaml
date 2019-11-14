@@ -18,6 +18,5 @@
 		</Grid.ColumnDefinitions>
 		<TextBlock Grid.Row="0" Text="{Binding BegegnungDetail.Begegnung}"/>
 		<TextBlock Grid.Row="1" Text="{Binding BegegnungDetail.Information}" TextWrapping="Wrap" TextTrimming="CharacterEllipsis"/>
-		
 	</Grid>
 </Page>

@@ -14,41 +14,6 @@ namespace MVVM.ViewModels
     public class FussballViewModel : BaseViewModel, IViewModel
     {
         public ObservableCollection<SpieltagModel> SpieltagCollection { get; set; }
-
-        //#region ICommand
-        //private ICommand _refreshTabelle { get; set; }
-        //public ICommand RefreshTabelle
-        //{
-        //    get
-        //    {
-        //        if (_refreshTabelle == null)
-        //        {
-        //            _refreshTabelle = new RelayCommand(
-        //                p => this.CanDoSomething());
-        //                //p => this.DoSomeImportantMethod());
-        //        }
-        //        return _refreshTabelle;
-        //    }
-        //}
-
-        //private bool CanDoSomething()
-        //{
-        //    if (SelectedSpiel != null)
-        //    {
-        //        return true;
-        //    }
-        //    return false;
-        //}
-
-        //private void DoSomeImportantMethod()
-        //{
-        //    SpieltagModel spiel = new SpieltagModel();
-        //    spiel.Name = "Schlechter Verein";
-        //    spiel.Punkte = 1;
-        //    SpieltagCollection.Add(verein);
-        //}
-        //#endregion ICommand
-
         private SpieltagModel _selectedSpiel { get; set; }
 
         public SpieltagModel SelectedSpiel
@@ -56,8 +21,6 @@ namespace MVVM.ViewModels
             get { return _selectedSpiel; }
             set { _selectedSpiel = value; OnPropertyChanged("SelectedSpiel"); }
         }
-
-
         public ObservableCollection<VereinModel> VereinCollection { get; set; }
 
         private VereinModel _selectedVerein { get; set; }
@@ -73,20 +36,6 @@ namespace MVVM.ViewModels
             get { return _liga; }
             set { _liga = value; OnPropertyChanged("Liga"); }
         }
-
-        public FussballViewModel()
-        {
-            VereinCollection = new ObservableCollection<VereinModel>();
-            MockData mock = new MockData();
-
-            List<VereinModel> vereinList = mock.GetMockData();
-            foreach (var item in vereinList)
-            {
-                VereinCollection.Add(item);
-            }
-            Liga = mock.GetMoreMock();
-        }
-
         #region ICommand
         private ICommand _refreshTabelle { get; set; }
         public ICommand RefreshTabelle

@@ -31,10 +31,8 @@ namespace MVVM.ViewModels
 
             foreach (var item in spieltagListe)
             {
-
                 SpieltagSammlung.Add(item);
             }
-
         }
 
         public event EventHandler<OnSelectedBegegnungChanged> SelectionChanged;

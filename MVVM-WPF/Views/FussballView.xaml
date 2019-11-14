@@ -11,9 +11,7 @@
 		<vm:MainViewModel/>
 	</Window.DataContext>
 	<Window.Resources>
-	
 	</Window.Resources>
-	
 	<Grid ShowGridLines="True">
 		<Grid.ColumnDefinitions>
 			<ColumnDefinition Width="*"/>
@@ -23,54 +21,11 @@
 			<RowDefinition Height="auto"/>
 			<RowDefinition Height="*"/>
 		</Grid.RowDefinitions>
-
-		<!--<StackPanel Grid.Row="1" Grid.Column="0">
-			<TextBlock Text="{Binding }"></TextBlock>
-			<TextBlock Text="{Binding SelectedSpiel.Information}"></TextBlock>
-		</StackPanel>
-
-		<StackPanel Grid.Row="1" Grid.Column="0">
-			<Image Source="{Binding SelectedVerein.Logo}"></Image>
-			<TextBlock Text="{Binding SelectedVerein.Name}"></TextBlock>
-		</StackPanel>
-
-
-		<Button Grid.Column="1" Grid.Row="0" Height="20" Command="{Binding RefreshTabelle}"></Button>
-
-		<Grid Grid.Row="1" Grid.Column="1">
-			<Grid.RowDefinitions>
-				<RowDefinition/>
-				<RowDefinition/>
-			</Grid.RowDefinitions>
-			<ListBox Grid.Row="0" ItemsSource="{Binding VereinCollection}" SelectedItem="{Binding SelectedVerein}">
-				<ListBox.ItemTemplate>
-					<DataTemplate>
-						<UniformGrid>
-							<TextBlock Text="{Binding Name}"/>
-							<TextBlock Text="{Binding Punkte}"/>
-						</UniformGrid>
-					</DataTemplate>
-				</ListBox.ItemTemplate>
-			</ListBox>
-		<Grid>
-			<ListBox ItemsSource="{Binding SpieltagSammlung}">
-				<ListBox.ItemTemplate>
-					<DataTemplate>
-						<StackPanel Orientation="Horizontal">
-							<TextBlock Text="{Binding Begegnung}"></TextBlock>
-						</StackPanel>
-					</DataTemplate>
-				</ListBox.ItemTemplate>
-			</ListBox>
-		</Grid>-->
-		
 		<Border Grid.Row="1" Grid.Column="0">
 			<Frame x:Name="MainContent" Content="{Binding SpieltagUi}"/>
 		</Border>
 		<Border Grid.Row="1" Grid.Column="1">
 			<Frame x:Name="M" Content="{Binding BegegnungUi}"/>
 		</Border>
-
-		<!--</Grid>-->
 	</Grid>
 </Window>
