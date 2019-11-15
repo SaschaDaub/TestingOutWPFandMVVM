@@ -55,14 +55,12 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="BundesligaDeserializing.cs" />
+    <Compile Include="Shared\BundesligaDeserializing.cs" />
     <Compile Include="Models\SpieltagModel.cs" />
-    <Compile Include="Models\VereinModel.cs" />
-    <Compile Include="OnSelectedBegegnungChanged.cs" />
-    <Compile Include="RelayCommand.cs" />
+    <Compile Include="Shared\OnSelectedBegegnungChanged.cs" />
+    <Compile Include="Shared\RelayCommand.cs" />
     <Compile Include="ViewModels\BaseViewModel.cs" />
     <Compile Include="ViewModels\BegegnungViewModel.cs" />
-    <Compile Include="ViewModels\FussballViewModel.cs" />
     <Compile Include="ViewModels\IViewModel.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
     <Compile Include="ViewModels\SpieltagViewModel.cs" />
